@@ -1,16 +1,15 @@
 import random
-import Tkinter
-from array import *
-from Tkinter import *
+import Tkinter as tk
+import array
 
-root = Tk()
+root = tk.Tk()
 root.title("RPG Dice Roller")
 
-textframe = Frame(root)
-listframe = Frame(root)
+textframe = tk.Frame(root)
+listframe = tk.Frame(root)
 
-amountAMT = Entry(textframe, width=5)
-amountMOD = Entry(textframe, width=5)
+amountAMT = tk.Entry(textframe, width=5)
+amountMOD = tk.Entry(textframe, width=5)
 amountINPT = int()
 
 
@@ -97,46 +96,46 @@ def Roll(inpt, dtype):
     textBox.insert(INSERT, totalRoll)
 
 
-buttonD2 = Button(textframe, text ="D2", command = D2)
-buttonD3 = Button(textframe, text ="D3", command = D3)
-buttonD4 = Button(textframe, text ="D4", command = D4)
-buttonD6 = Button(textframe, text ="D6", command = D6)
-buttonD8 = Button(textframe, text ="D8", command = D8)
-buttonD10 = Button(textframe, text ="D10", command = D10)
-buttonD12 = Button(textframe, text ="D12", command = D12)
-buttonD20 = Button(textframe, text ="D20", command = D20)
-buttonD100 = Button(textframe, text ="D100", command = D100)
+buttonD2 = tk.Button(textframe, text ="D2", command = D2)
+buttonD3 = tk.Button(textframe, text ="D3", command = D3)
+buttonD4 = tk.Button(textframe, text ="D4", command = D4)
+buttonD6 = tk.Button(textframe, text ="D6", command = D6)
+buttonD8 = tk.Button(textframe, text ="D8", command = D8)
+buttonD10 = tk.Button(textframe, text ="D10", command = D10)
+buttonD12 = tk.Button(textframe, text ="D12", command = D12)
+buttonD20 = tk.Button(textframe, text ="D20", command = D20)
+buttonD100 = tk.Button(textframe, text ="D100", command = D100)
 
 
 
 
 
 
-scrollbar = Scrollbar(listframe, orient=VERTICAL)
-textBox = Text(listframe, yscrollcommand=scrollbar.set)
+scrollbar = tk.Scrollbar(listframe, orient=tk.VERTICAL)
+textBox = tk.Text(listframe, yscrollcommand=scrollbar.set)
 scrollbar.configure(command=textBox.yview)
-lblAMT = Tkinter.Label(textframe, text="Amount:")
-lblMOD = Tkinter.Label(textframe, text="Mod:")
-lblMODpn = Tkinter.Label(textframe, text = "(+/-)")
+lblAMT = tk.Label(textframe, text="Amount:")
+lblMOD = tk.Label(textframe, text="Mod:")
+lblMODpn = tk.Label(textframe, text = "(+/-)")
 
-lblAMT.pack(side=LEFT)
-amountAMT.pack(side=LEFT, fill=X)
-buttonD2.pack(side=LEFT)
-buttonD3.pack(side=LEFT)
-buttonD4.pack(side=LEFT)
-buttonD6.pack(side=LEFT)
-buttonD8.pack(side=LEFT)
-buttonD10.pack(side=LEFT)
-buttonD12.pack(side=LEFT)
-buttonD20.pack(side=LEFT)
-buttonD100.pack(side=LEFT)
-lblMOD.pack(side=LEFT)
-amountMOD.pack(side=LEFT, fill=X)
-lblMODpn.pack(side=LEFT)
-textBox.pack(side=LEFT, expand=1)
-scrollbar.pack(side=RIGHT, fill=Y)
-textframe.pack(fill=BOTH)
-listframe.pack(fill=BOTH, expand=1)
+lblAMT.pack(side=tk.LEFT)
+amountAMT.pack(side=tk.LEFT, fill=tk.X)
+buttonD2.pack(side=tk.LEFT)
+buttonD3.pack(side=tk.LEFT)
+buttonD4.pack(side=tk.LEFT)
+buttonD6.pack(side=tk.LEFT)
+buttonD8.pack(side=tk.LEFT)
+buttonD10.pack(side=tk.LEFT)
+buttonD12.pack(side=tk.LEFT)
+buttonD20.pack(side=tk.LEFT)
+buttonD100.pack(side=tk.LEFT)
+lblMOD.pack(side=tk.LEFT)
+amountMOD.pack(side=tk.LEFT, fill=tk.X)
+lblMODpn.pack(side=tk.LEFT)
+textBox.pack(side=tk.LEFT, expand=1)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+textframe.pack(fill=tk.BOTH)
+listframe.pack(fill=tk.BOTH, expand=1)
 
 #root.geometry("800x400")
 
