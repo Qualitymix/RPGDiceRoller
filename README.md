@@ -1,2 +1,2 @@
-# RPGDiceRoller
-Easy to use RPG Dice Roller
+# RPGDiceRoller - Python
+Easy to use RPG Dice Roller with a Tkinter GUI
