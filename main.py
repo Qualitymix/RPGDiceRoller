@@ -1,6 +1,6 @@
 import random
 import Tkinter as tk
-import array
+import array as ar
 
 root = tk.Tk()
 root.title("RPG Dice Roller")
@@ -64,36 +64,36 @@ def GetMOD():
     return amountMODINPT
 
 def Roll(inpt, dtype):
-    textBox.delete(1.0, END)
+    textBox.delete(1.0, tk.END)
     amountpass = 0
     total = 0
-    dicearray = array('i')
+    dicearray = ar.array('i')
 
     while amountpass < inpt:
         x = random.randint(1, dtype)
         dicearray.insert(amountpass, x)
         amountpass = amountpass + 1
-        textBox.insert(INSERT,'Roll ')
-        textBox.insert(INSERT,amountpass)
-        textBox.insert(INSERT, ': ')
+        textBox.insert(tk.INSERT,'Roll ')
+        textBox.insert(tk.INSERT,amountpass)
+        textBox.insert(tk.INSERT, ': ')
         #textBox.insert(INSERT,'\n')
-        textBox.insert(INSERT,x)
-        textBox.insert(INSERT,'\n')
+        textBox.insert(tk.INSERT,x)
+        textBox.insert(tk.INSERT,'\n')
 
     for i in dicearray:
         total = total + i
     totalRoll = total + GetMOD()
     if (totalRoll <= 0):
         totalRoll = 0
-    textBox.insert(INSERT, 'Total:')
-    textBox.insert(INSERT, total)
+    textBox.insert(tk.INSERT, 'Total:')
+    textBox.insert(tk.INSERT, total)
     if (GetMOD() >= 0):
-        textBox.insert(INSERT, ' + ')
+        textBox.insert(tk.INSERT, ' + ')
     if (GetMOD() < 0):
-        textBox.insert(INSERT, ' - ')
-    textBox.insert(INSERT, abs(GetMOD()))
-    textBox.insert(INSERT, ' = ')
-    textBox.insert(INSERT, totalRoll)
+        textBox.insert(tk.INSERT, ' - ')
+    textBox.insert(tk.INSERT, abs(GetMOD()))
+    textBox.insert(tk.INSERT, ' = ')
+    textBox.insert(tk.INSERT, totalRoll)
 
 
 buttonD2 = tk.Button(textframe, text ="D2", command = D2)
