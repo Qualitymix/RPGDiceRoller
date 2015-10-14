@@ -12,9 +12,6 @@ amountAMT = tk.Entry(textframe, width=5)
 amountMOD = tk.Entry(textframe, width=5)
 amountINPT = int()
 
-
-
-
 def D2():
     dtype = 2
     Roll(GetAMT(), dtype)
@@ -76,7 +73,6 @@ def Roll(inpt, dtype):
         textBox.insert(tk.INSERT,'Roll ')
         textBox.insert(tk.INSERT,amountpass)
         textBox.insert(tk.INSERT, ': ')
-        #textBox.insert(INSERT,'\n')
         textBox.insert(tk.INSERT,x)
         textBox.insert(tk.INSERT,'\n')
 
@@ -106,11 +102,6 @@ buttonD12 = tk.Button(textframe, text ="D12", command = D12)
 buttonD20 = tk.Button(textframe, text ="D20", command = D20)
 buttonD100 = tk.Button(textframe, text ="D100", command = D100)
 
-
-
-
-
-
 scrollbar = tk.Scrollbar(listframe, orient=tk.VERTICAL)
 textBox = tk.Text(listframe, yscrollcommand=scrollbar.set)
 scrollbar.configure(command=textBox.yview)
@@ -137,21 +128,4 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 textframe.pack(fill=tk.BOTH)
 listframe.pack(fill=tk.BOTH, expand=1)
 
-#root.geometry("800x400")
-
-
-
-
-
 root.mainloop()
-
-
-#amount = int(input('Amount of dice: '))
-
-
-
-
-
-
-
-
