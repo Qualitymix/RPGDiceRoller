@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import random
 import Tkinter as tk
 import array as ar
